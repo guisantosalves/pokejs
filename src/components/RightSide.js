@@ -1,61 +1,57 @@
 import * as React from "react";
-import {Col, ListGroup } from "react-bootstrap";
+import {Col, Carousel } from "react-bootstrap";
 
 const RightSide = (props) => {
 
   return (
     <Col sm={10} style={{border: "1px solid red"}}>
-      <ListGroup>
-        <ListGroup.Item>
-          <div>
-            <h2>Pokedex</h2>
-          </div>
-        </ListGroup.Item>
-
-        <ListGroup.Item>
-          <div>
-            <h2>Home</h2>
-          </div>
-        </ListGroup.Item>
-
-        <ListGroup.Item>
-          <div>
-            <h2>Habilidades</h2>
-          </div>
-        </ListGroup.Item>
-
-        <ListGroup.Item >
-          <div>
-            <h2>Detalhes</h2>
-          </div>
-        </ListGroup.Item>
-      </ListGroup>
+      <div style={style.carrosel}>
+          <Carousel>
+              <Carousel.Item>
+                  <img 
+                    className="d-block w-100"
+                    src="https://images5.alphacoders.com/613/613925.jpg"
+                    style={{width: "200px", height: "600px"}}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                      <h2 style={{color: "orange"}}>Pokedex</h2>
+                      <p style={{color: "orange"}}>Aqui você encontra os melhores pokemons e sua descrição</p>
+                  </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                  <img 
+                    className="d-block w-100"
+                    src="https://images4.alphacoders.com/111/111858.jpg"
+                    style={{width: "200px", height: "600px"}}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                      <h2 style={{color: "orange"}}>Pokedex</h2>
+                      <p style={{color: "orange"}}>Aqui você encontra os melhores pokemons e sua descrição</p>
+                  </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                  <img 
+                    className="d-block w-100"
+                    src="https://images.alphacoders.com/119/119081.jpg"
+                    style={{width: "200px", height: "600px"}}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                      <h2 style={{color: "orange"}}>Pokedex</h2>
+                      <p style={{color: "orange"}}>Aqui você encontra os melhores pokemons e sua descrição</p>
+                  </Carousel.Caption>
+              </Carousel.Item>
+          </Carousel>
+      </div>
     </Col>
   );
 };
 
 const style = {
-  container: {
-    display: "flex",
-    border: "1px solid red",
-    width: "10%",
-    position: "fixed",
-    height: "100%",
-    backgroundColor: "#DB2B39",
-    fontFamily: "Arial, Helvetica, sans-serif"
-  },
-  titleMenu: {
-    marginTop: "40px",
-    fontFamily: "Arial, Helvetica, sans-serif",
-    border: "1px solid blue",
-    borderRadius: "50px",
-    padding: "5px",
-    textAlign: "center",
-    marginLeft: "-20px",
-    backgroundColor: "#F3A712"
-  },
-  button: {
-    justifyContent: "center"
+  carrosel: {
+    padding: "5px"
   },
 };
 
