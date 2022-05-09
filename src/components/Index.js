@@ -3,6 +3,7 @@ import Aside from "./Aside"
 import RightSide from "./RightSide";
 
 const Index = () =>{
+
   return (
     <Container fluid>
       <Row>

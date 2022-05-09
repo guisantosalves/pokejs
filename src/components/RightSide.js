@@ -1,5 +1,6 @@
 import * as React from "react";
 import {Col, Carousel } from "react-bootstrap";
+import AdBar from "./subcomponents/Adbar"
 
 const RightSide = (props) => {
 
@@ -44,6 +45,7 @@ const RightSide = (props) => {
                   </Carousel.Caption>
               </Carousel.Item>
           </Carousel>
+          <AdBar/>
       </div>
     </Col>
   );
