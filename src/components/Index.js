@@ -8,7 +8,7 @@ const Index = () =>{
     <Container fluid>
       <Row>
         <Aside/>
-        <RightSide/>
+        <RightSide/> 
       </Row>
     </Container>
   );
