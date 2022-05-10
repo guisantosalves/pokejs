@@ -1,14 +1,17 @@
 import {Container, Row} from "react-bootstrap"
 import Aside from "./Aside"
 import RightSide from "./RightSide";
-
+import Footer from "./Footer";
 const Index = () =>{
 
   return (
-    <Container fluid>
+    <Container>
       <Row>
         <Aside/>
         <RightSide/> 
+      </Row>
+      <Row>
+        <Footer/>
       </Row>
     </Container>
   );

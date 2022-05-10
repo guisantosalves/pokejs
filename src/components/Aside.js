@@ -3,7 +3,7 @@ import { Col, ListGroup, Button } from "react-bootstrap";
 
 const Aside = (props) => {
   return (
-    <Col sm={2} style={{ border: "1px solid red", backgroundColor: "#DB2B39" }}>
+    <Col sm={2} style={{ backgroundColor: "#DB2B39"  }}>
       <div>
         <ListGroup>
           <ListGroup.Item style={style.titleMenu}>
@@ -18,7 +18,7 @@ const Aside = (props) => {
 
           <ListGroup.Item style={style.titleMenu}>
             <Button style={style.button}>
-              <h2>Habilidades</h2>
+              <h2>Search</h2>
             </Button>
           </ListGroup.Item>
 
@@ -38,7 +38,7 @@ const style = {
   container: {
     display: "flex",
     border: "1px solid red",
-    width: "10%",
+
     position: "fixed",
     height: "100%",
     backgroundColor: "#DB2B39",
@@ -49,9 +49,8 @@ const style = {
     backgroundColor: "#DB2B39",
   },
   button: {
-    borderRadius: "50px",
-    padding: "20px",
-    width: "200px",
+    
+    
     backgroundColor: "#F3A712",
     color: "black",
   },

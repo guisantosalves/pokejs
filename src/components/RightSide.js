@@ -6,7 +6,7 @@ import CardsContent from "./subcomponents/CardsContent";
 const RightSide = (props) => {
 
   return (
-    <Col sm={10} style={{border: "1px solid red"}}>
+    <Col sm={10}>
       <div style={style.carrosel}>
           <Carousel>
               <Carousel.Item>
@@ -46,7 +46,10 @@ const RightSide = (props) => {
                   </Carousel.Caption>
               </Carousel.Item>
           </Carousel>
+          {/* lugar do AD */}
           <AdBar/>
+
+          {/* conteúdo dos cards que vou pegar da api */}
           <CardsContent/>
       </div>
     </Col>
