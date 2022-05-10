@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const Index = () =>{
 
   return (
-    <Container>
+    <Container style={{backgroundColor: "#F0CEA0"}}>
       <Row>
         <Aside/>
         <RightSide/> 
