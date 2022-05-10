@@ -38,7 +38,6 @@ const style = {
   container: {
     display: "flex",
     border: "1px solid red",
-
     position: "fixed",
     height: "100%",
     backgroundColor: "#DB2B39",
@@ -49,8 +48,7 @@ const style = {
     backgroundColor: "#DB2B39",
   },
   button: {
-    
-    
+    width: "150px",
     backgroundColor: "#F3A712",
     color: "black",
   },
