@@ -13,14 +13,14 @@ const Aside = (props) => {
   return (
     <Navbar expand="lg" style={style.navbar}>
       <Container>
-        <Navbar.Brand href="#home" style={style.fontPokedex}>
+        <Navbar.Brand href="/" style={style.fontPokedex}>
           Pokedex
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" />
         <Nav className="me-auto">
-          <Nav.Link href="#Search">Search</Nav.Link>
-          <Nav.Link href="#Detalhes">Detalhes</Nav.Link>
+          <Nav.Link href="/search">Search</Nav.Link>
+          <Nav.Link href="/details">Detalhes</Nav.Link>
           <NavDropdown title="Comunidade" id="basic-nav-dropdown">
             <NavDropdown.Item href="#cadastrar">cadastrar</NavDropdown.Item>
             <NavDropdown.Item href="#vercadastros">Análise</NavDropdown.Item>

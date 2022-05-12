@@ -1,53 +1,25 @@
 import * as React from "react";
-import {Col, Carousel } from "react-bootstrap";
+import {Col} from "react-bootstrap";
 import AdBar from "./subcomponents/Adbar";
 import CardsContent from "./subcomponents/CardsContent";
+import CarouselPoke from "./subcomponents/CarouselPoke";
+import SearchBar from "./subcomponents/SeachBar";
 
 const RightSide = (props) => {
-
+  
+  const VerifyFromSearch = props.verifica;
   return (
     <Col>
       <div style={style.carrosel}>
-          <Carousel>
-              <Carousel.Item>
-                  <img 
-                    className="d-block w-100"
-                    src="https://images5.alphacoders.com/613/613925.jpg"
-                    style={{width: "200px", height: "600px"}}
-                    alt="First slide"
-                  />
-                  <Carousel.Caption>
-                      <h2 style={{color: "orange"}}>Pokedex</h2>
-                      <p style={{color: "orange"}}>Aqui você encontra os melhores pokemons e sua descrição</p>
-                  </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                  <img 
-                    className="d-block w-100"
-                    src="https://images4.alphacoders.com/111/111858.jpg"
-                    style={{width: "200px", height: "600px"}}
-                    alt="First slide"
-                  />
-                  <Carousel.Caption>
-                      <h2 style={{color: "orange"}}>Pokedex</h2>
-                      <p style={{color: "orange"}}>Aqui você encontra os melhores pokemons e sua descrição</p>
-                  </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                  <img 
-                    className="d-block w-100"
-                    src="https://images.alphacoders.com/119/119081.jpg"
-                    style={{width: "200px", height: "600px"}}
-                    alt="First slide"
-                  />
-                  <Carousel.Caption>
-                      <h2 style={{color: "orange"}}>Pokedex</h2>
-                      <p style={{color: "orange"}}>Aqui você encontra os melhores pokemons e sua descrição</p>
-                  </Carousel.Caption>
-              </Carousel.Item>
-          </Carousel>
+
+          {/* search bar for search page*/}
+          {VerifyFromSearch ? <SearchBar/>:<></>}
+
+          {/* carousel poke*/}
+          {VerifyFromSearch ? <></>:<CarouselPoke/>}
+
           {/* lugar do AD */}
-          <AdBar/>
+          {VerifyFromSearch ? <></>:<AdBar/>}
 
           {/* conteúdo dos cards que vou pegar da api */}
           <CardsContent/>
