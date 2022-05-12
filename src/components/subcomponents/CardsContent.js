@@ -2,6 +2,11 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 
 const CardsContent = (props) => {
+
+  const ModalForCard = () => {
+    //configurar o modal do card aqui
+  }
+  
   return (
     <div style={style.container}>
 
