@@ -6,7 +6,7 @@ import CardsContent from "./subcomponents/CardsContent";
 const RightSide = (props) => {
 
   return (
-    <Col sm={10}>
+    <Col>
       <div style={style.carrosel}>
           <Carousel>
               <Carousel.Item>

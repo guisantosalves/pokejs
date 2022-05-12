@@ -1,57 +1,47 @@
 import * as React from "react";
-import { Col, ListGroup, Button } from "react-bootstrap";
+import {
+  Col,
+  ListGroup,
+  Button,
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+} from "react-bootstrap";
 
 const Aside = (props) => {
   return (
-    <Col sm={2} style={{ backgroundColor: "#DB2B39"  }}>
-      <div>
-        <ListGroup>
-          <ListGroup.Item style={style.titleMenu}>
-            <h2>Pokedex</h2>
-          </ListGroup.Item>
-
-          <ListGroup.Item style={style.titleMenu}>
-            <Button style={style.button}>
-              <h2>Home</h2>
-            </Button>
-          </ListGroup.Item>
-
-          <ListGroup.Item style={style.titleMenu}>
-            <Button style={style.button}>
-              <h2>Search</h2>
-            </Button>
-          </ListGroup.Item>
-
-          <ListGroup.Item style={style.titleMenu}>
-            <Button style={style.button}>
-              <h2>Detalhes</h2>
-            </Button>
-          </ListGroup.Item>
-          
-        </ListGroup>
-      </div>
-    </Col>
+    <Navbar expand="lg" style={style.navbar}>
+      <Container>
+        <Navbar.Brand href="#home" style={style.fontPokedex}>
+          Pokedex
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" />
+        <Nav className="me-auto">
+          <Nav.Link href="#Search">Search</Nav.Link>
+          <Nav.Link href="#Detalhes">Detalhes</Nav.Link>
+          <NavDropdown title="Comunidade" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#cadastrar">cadastrar</NavDropdown.Item>
+            <NavDropdown.Item href="#vercadastros">Análise</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#Excluir">Excluir cards</NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 };
 
 const style = {
-  container: {
-    display: "flex",
-    border: "1px solid red",
-    position: "fixed",
-    height: "100%",
+  navbar: {
     backgroundColor: "#DB2B39",
-    fontFamily: "Arial, Helvetica, sans-serif",
+    height: "80px",
   },
-  titleMenu: {
-    textAlign: "center",
-    backgroundColor: "#DB2B39",
-  },
-  button: {
-    width: "150px",
-    backgroundColor: "#F3A712",
-    color: "black",
-  },
+  fontPokedex: {
+    fontSize: "3em",
+    fontFamily: "Times New Roman",
+  }
 };
 
 export default Aside;

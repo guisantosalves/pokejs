@@ -192,12 +192,11 @@ const CardsContent = (props) => {
 const style = {
   container: {
     backgroundColor: "#F0CEA0",
-    marginTop: "15px",
   },
   content: {
     display: "inline-block",
     color: "white",
-    padding: "33px",
+    padding: "16px",
   },
 };
 
