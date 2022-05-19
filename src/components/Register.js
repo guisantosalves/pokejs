@@ -9,39 +9,44 @@ const Register = (props) => {
       <Aside />
       <div style={style.Container}>
         <Container>
-          <Row style={{border: "1px solid red", padding: "15px"}}>
+          <Row>
             <Col style={{ height: "700px" }}>
-              <Form>
-                <Form.Group className="mb-3" controlId="formBasicPokemonName">
-                  <Form.Label>Insira o nome do pokemon</Form.Label>
-                  <Form.Control type="text" placeholder="Ex: Pikachu" />
-                </Form.Group>
+              <div style={style.ContainerFront}>
+                <Form>
+                  <Form.Group className="mb-3" controlId="formBasicPokemonName">
+                    <Form.Label>Insira o nome do pokemon</Form.Label>
+                    <Form.Control type="text" placeholder="Ex: Pikachu" />
+                  </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPokemonName">
-                  <Form.Label>Insira sua descrição</Form.Label>
-                  <Form.Control type="text" placeholder="Ex: É fofinho" />
-                </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPokemonName">
+                    <Form.Label>Insira sua descrição</Form.Label>
+                    <Form.Control type="text" placeholder="Ex: É fofinho" />
+                  </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPokemonName">
-                  <Form.Label>Insira sua força</Form.Label>
-                  <Form.Control type="number" placeholder="Ex: 2300" />
-                </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPokemonName">
+                    <Form.Label>Insira sua força</Form.Label>
+                    <Form.Control type="number" placeholder="Ex: 2300" />
+                  </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPokemonName">
-                  <Form.Label>Insira sua defesa</Form.Label>
-                  <Form.Control type="number" placeholder="Ex: 2500" />
-                </Form.Group>
-              </Form>
+                  <Form.Group className="mb-3" controlId="formBasicPokemonName">
+                    <Form.Label>Insira sua defesa</Form.Label>
+                    <Form.Control type="number" placeholder="Ex: 2500" />
+                  </Form.Group>
+                </Form>
+              </div>
             </Col>
             <Col>
-              <div>
-                <h1 style={style.Texts}>Seu card</h1>
-              </div>
-              <div>
-                <p style={style.Texts}>
-                  Seu Card será cadastrado e ficará amostra para todos usuários
-                  que irão acessar o site, obrigado por sua contribuição :D
-                </p>
+              <div style={style.ContainerFront}>
+                <div>
+                  <h1 style={style.Texts}>Seu card</h1>
+                </div>
+                <div>
+                  <p style={style.Texts}>
+                    Seu Card será cadastrado e ficará amostra para todos
+                    usuários que irão acessar o site, obrigado por sua
+                    contribuição :D
+                  </p>
+                </div>
               </div>
             </Col>
           </Row>
@@ -63,5 +68,12 @@ const style = {
     backgroundSize: "auto",
     backgroundPosition: "center",
   },
+  ContainerFront: {
+    margin: "15px",
+    backgroundColor: "rgba(99, 89, 92, 0.8)",
+    padding: "15px",
+    color: "#62BEC1",
+    borderRadius: "10px"
+  }
 };
 export default Register;
