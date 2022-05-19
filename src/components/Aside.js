@@ -20,7 +20,7 @@ const Aside = (props) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
 
         {/* arrumar isso aq, nao esta pegando */}
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" style={style.navbarCollapse}>
           <Nav className="me-auto">
             <Nav.Link href="/search">Search</Nav.Link>
             <Nav.Link href="/details">Detalhes</Nav.Link>
@@ -41,11 +41,20 @@ const style = {
   navbar: {
     backgroundColor: "#DB2B39",
     height: "80px",
+    zIndex: "999"
   },
   fontPokedex: {
     fontSize: "3em",
     fontFamily: "Times New Roman",
   },
+  navbarCollapse: {
+    backgroundColor: "#db2b39",
+    borderRadius: "10px",
+    padding: "15px"
+  },
+  dropDownPicker: {
+    backgroundColor: "#db2b39",
+  }
 };
 
 export default Aside;
