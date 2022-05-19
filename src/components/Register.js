@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Form, Row, Col, Image } from "react-bootstrap";
 import Aside from "./Aside";
 import Footer from "./Footer";
 
 const Register = (props) => {
+  const [image, setimage] = useState(null);
+
+  const onImageChange = (event) => {
+
+    if (event.target.files && event.target.files[0]) {
+      let img = event.target.files[0];
+      //about url.createObjectURL As opposed to a base64-encoded 
+      //data URL, it doesn't contain the actual data of the object – 
+      //instead it holds a reference.
+      console.log(img)
+      setimage(URL.createObjectURL(img));
+    }
+
+  };
+
   return (
     <>
       <Aside />
@@ -32,6 +47,11 @@ const Register = (props) => {
                     <Form.Label>Insira sua defesa</Form.Label>
                     <Form.Control type="number" placeholder="Ex: 2500" />
                   </Form.Group>
+
+                  <Form.Group className="mb-3" controlId="formBasicPokemonName">
+                    <Form.Label>insira seu pokemon</Form.Label>
+                    <Form.Control type="file" name="yourPokemon" onChange={onImageChange}/>
+                  </Form.Group>
                 </Form>
               </div>
             </Col>
@@ -47,6 +67,7 @@ const Register = (props) => {
                     contribuição :D
                   </p>
                 </div>
+                {image === null ? <></> : <Image src={image} style={style.uploadedImage}/>}
               </div>
             </Col>
           </Row>
@@ -73,7 +94,11 @@ const style = {
     backgroundColor: "rgba(99, 89, 92, 0.8)",
     padding: "15px",
     color: "#62BEC1",
-    borderRadius: "10px"
+    borderRadius: "10px",
+  },
+  uploadedImage: {
+    width: "250px",
+    height: "250px"
   }
 };
 export default Register;
